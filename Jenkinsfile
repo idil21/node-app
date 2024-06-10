@@ -1,7 +1,7 @@
 pipeline {
     agent any
 
-    ttools {nodejs "default"}
+    tools {nodejs "default"}
     
 
     stages {
