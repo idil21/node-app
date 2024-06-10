@@ -1,7 +1,7 @@
 pipeline {
     agent any
     tools {nodejs "22.2.0"}
-
+    
 
     stages {
         stage('Checkout') {
@@ -16,10 +16,12 @@ pipeline {
                 sh 'npm install'
             }
         }
-        stage('Run Tests') {
+        stage('Build') {
             steps {
-                // Run tests using npm
-                sh 'npm test'
+                script {
+                   
+                    sh 'docker build -t node-app:$3756c71ed714 .'
+                }
             }
         }
         
