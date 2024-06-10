@@ -1,5 +1,6 @@
 pipeline {
     agent any
+    tools {nodejs "22.2.0"}
 
 
     stages {
